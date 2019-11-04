@@ -1,5 +1,6 @@
 import fetch from "isomorphic-unfetch";
 import { withRouter } from "next/router";
+import Error from "next/error";
 
 class Index extends React.Component {
   static async getInitialProps() {
@@ -16,7 +17,20 @@ class Index extends React.Component {
   render() {
     const { stories } = this.props;
 
-    return <div>Hacker Next</div>;
+    if (stories.length === 0) {
+      return <Error statusCode={503} />;
+    }
+
+    return (
+      <div>
+        <h1>Hacker next</h1>
+        <div>
+          {stories.map(story => (
+            <div key={story.id}>{story.title}</div>
+          ))}
+        </div>
+      </div>
+    );
   }
 }
 
