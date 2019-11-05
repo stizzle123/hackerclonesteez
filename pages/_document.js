@@ -28,21 +28,21 @@ export default class MyDocument extends Document {
 
           <link
             rel="icon"
-            type="image/jpg"
+            type="image/png"
             sizes="512x512"
-            href="/hackernews-512x512.jpg"
+            href="/hackernews-512x512.png"
           />
           <link
             rel="apple-touch-icon"
-            type="image/jpg"
+            type="image/png"
             sizes="512x512"
-            href="/hackernews-512x512.jpg"
+            href="/hackernews-512x512.png"
           />
-          <link rel="icon" type="image/jpg" href="/hackernews-192x192.jpg" />
+          <link rel="icon" type="image/png" href="/hackernews-192x192.png" />
           <link
             rel="apple-touch-icon"
-            type="image/jpg"
-            href="/hackernews-192x192.jpg"
+            type="image/png"
+            href="/hackernews-192x192.png"
           />
         </Head>
         <body>

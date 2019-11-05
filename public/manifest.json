@@ -7,13 +7,13 @@
   "theme_color": "#f60",
   "icons": [
     {
-      "src": "/hackernews-512x512.jpg",
+      "src": "/hackernews-512x512.png",
       "sizes": "512x512",
-      "type": "image/jpg"
+      "type": "image/png"
     },
     {
-      "src": "/hackernews-192x192.jpg",
-      "type": "image/jpg"
+      "src": "/hackernews-192x192.png",
+      "type": "image/png"
     }
   ]
 }
