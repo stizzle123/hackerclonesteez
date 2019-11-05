@@ -1,0 +1,19 @@
+{
+  "name": "Hacker Clone Steez",
+  "short_name": "hacker-clone-steez",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f60",
+  "icons": [
+    {
+      "src": "/hackernews-512x512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    },
+    {
+      "src": "/hackernews-192x192.jpg",
+      "type": "image/jpg"
+    }
+  ]
+}
