@@ -16,7 +16,7 @@ app.prepare().then(() => {
       const { pathname } = parsedUrl;
 
       /* If a service worker requested, serve it as a static file */
-      if (pathname === "/service-worker.js") {
+      if (pathname === "/.next/service-worker.js") {
         const filePath = path.join(__dirname, ".next", pathname);
         app.serveStatic(req, res, filePath);
 
