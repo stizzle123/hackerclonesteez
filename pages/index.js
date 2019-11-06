@@ -25,15 +25,14 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    // register();
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker
-        .register("/service-worker.js")
+        .register("/service-worker.js", { scope: "." })
         .then(registration => {
-          console.log("Service worker registered", registration);
+          console.log("service worker registration successful", registration);
         })
         .catch(err => {
-          console.warn("Service worker failed to register", err);
+          console.warn("service worker registration failed", err.message);
         });
     }
   }
