@@ -25,21 +25,22 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/service-worker.js", { scope: "/" })
-        .then(registration => {
-          console.log("service worker registration successful", registration);
-        })
-        .catch(err => {
-          console.warn("service worker registration failed", err.message);
-        });
-    }
+    // if ("serviceWorker" in navigator) {
+    //   navigator.serviceWorker
+    //     .register("/service-worker.js", { scope: "/" })
+    //     .then(registration => {
+    //       console.log("service worker registration successful", registration);
+    //     })
+    //     .catch(err => {
+    //       console.warn("service worker registration failed", err.message);
+    //     });
+    // }
+    register();
   }
 
-  // componentWillUnmount() {
-
-  // }
+  componentWillUnmount() {
+    unregister();
+  }
 
   render() {
     const { stories, page } = this.props;
