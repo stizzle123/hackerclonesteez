@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "set NODE_ENV=production && node server.js"
+    "start": "set NODE_ENV=production && node server.js",
+    "heroku-postbuild": "next build"
   },
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
