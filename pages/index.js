@@ -35,11 +35,11 @@ class Index extends React.Component {
     //       console.log("SW registration failed: ", registrationError);
     //     });
     // }
-    register();
+    // register();
   }
 
   componentWillUnmount() {
-    unregister();
+    // unregister();
   }
 
   render() {
