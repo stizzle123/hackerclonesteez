@@ -28,7 +28,7 @@ class Index extends React.Component {
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function() {
         navigator.serviceWorker
-          .register("../.next/service-worker.js", { scope: "/" })
+          .register("/service-worker.js", { scope: ".next" })
           .then(function(registration) {
             console.log("SW registered: ", registration);
           })
