@@ -4,7 +4,6 @@ import Error from "next/error";
 import Link from "next/link";
 import StoryList from "../components/StoryList";
 import Layout from "../components/Layout";
-import { register, unregister } from "next-offline/runtime";
 
 class Index extends React.Component {
   static async getInitialProps({ req, res, query }) {
@@ -22,24 +21,6 @@ class Index extends React.Component {
       stories = [];
     }
     return { stories, page };
-  }
-
-  componentDidMount() {
-    // if ("serviceWorker" in navigator) {
-    //   navigator.serviceWorker
-    //     .register("/service-worker.js", { scope: "/" })
-    //     .then(function(registration) {
-    //       console.log("SW registered: ", registration);
-    //     })
-    //     .catch(function(registrationError) {
-    //       console.log("SW registration failed: ", registrationError);
-    //     });
-    // }
-    // register();
-  }
-
-  componentWillUnmount() {
-    // unregister();
   }
 
   render() {
