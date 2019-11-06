@@ -2,6 +2,7 @@ const next = require("next");
 const http = require("http");
 const url = require("url");
 const path = require("path");
+const { createReadStream } = require("fs");
 
 const port = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
@@ -19,6 +20,8 @@ app.prepare().then(() => {
       if (pathname === "/service-worker.js") {
         const filePath = path.join(__dirname, ".next", pathname);
         app.serveStatic(req, res, filePath);
+        res.setHeader("content-type", "text/javascript");
+        createReadStream("/service-worker.js").pipe(res);
 
         /* Otherwise, let Next take care of it */
       } else {
