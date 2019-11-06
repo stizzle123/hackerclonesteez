@@ -25,17 +25,17 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/service-worker.js", { scope: "/" })
-        .then(function(registration) {
-          console.log("SW registered: ", registration);
-        })
-        .catch(function(registrationError) {
-          console.log("SW registration failed: ", registrationError);
-        });
-    }
-    // register();
+    // if ("serviceWorker" in navigator) {
+    //   navigator.serviceWorker
+    //     .register("/service-worker.js", { scope: "/" })
+    //     .then(function(registration) {
+    //       console.log("SW registered: ", registration);
+    //     })
+    //     .catch(function(registrationError) {
+    //       console.log("SW registration failed: ", registrationError);
+    //     });
+    // }
+    register();
   }
 
   componentWillUnmount() {
