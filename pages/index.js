@@ -25,17 +25,19 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    // if ("serviceWorker" in navigator) {
-    //   navigator.serviceWorker
-    //     .register("/service-worker.js", { scope: "/" })
-    //     .then(registration => {
-    //       console.log("service worker registration successful", registration);
-    //     })
-    //     .catch(err => {
-    //       console.warn("service worker registration failed", err.message);
-    //     });
-    // }
-    register();
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker
+          .register("/service-worker.js", { scope: "/" })
+          .then(function(registration) {
+            console.log("SW registered: ", registration);
+          })
+          .catch(function(registrationError) {
+            console.log("SW registration failed: ", registrationError);
+          });
+      });
+    }
+    // register();
   }
 
   componentWillUnmount() {
